@@ -1,0 +1,24 @@
+--create table for a store database
+CREATE TABLE store_DB (id INTEGER PRIMARY KEY, name TEXT, quality TEXT,quantity INTEGER, price INTEGER);
+
+--inserting fluff data to then enact SELECT statements on
+INSERT INTO store_DB VALUES (1, "Bananas", "New", 10, 5);
+INSERT INTO store_DB VALUES (2, "Bananas", "New", 10, 5);
+INSERT INTO store_DB VALUES (3, "Bananas", "New", 10, 5);
+INSERT INTO store_DB VALUES (4, "Bananas", "New", 10, 5);
+INSERT INTO store_DB VALUES (5, "Bananas", "New", 10, 5);
+INSERT INTO store_DB VALUES (6, "Bananas", "New", 10, 5);
+INSERT INTO store_DB VALUES (7, "Bananas", "New", 10, 5);
+INSERT INTO store_DB VALUES (8, "Bananas", "New", 10, 5);
+INSERT INTO store_DB VALUES (9, "Bananas", "New", 10, 5);
+INSERT INTO store_DB VALUES (10, "Bikes", "New", 10, 10);
+INSERT INTO store_DB VALUES (11, "Bananas", "New", 10, 5);
+INSERT INTO store_DB VALUES (12, "Bikes", "New", 10, 5);
+INSERT INTO store_DB VALUES (13, "Bananas", "New", 10, 8);
+INSERT INTO store_DB VALUES (14, "Bananas", "New", 10, 5);
+INSERT INTO store_DB VALUES (15, "Bikes", "New", 11, 7);
+
+---Showing order by functionality of a queried data set
+SELECT name, quality, quantity, Price FROM store_db WHERE name = "Bikes" ORDER BY price;
+--aggregation within a query
+SELECT name, quality, SUM(quantity) FROM store_db WHERE name = "Bikes" ORDER BY price;
